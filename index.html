@@ -45,7 +45,7 @@
     <p class="section-label reveal">// Experience</p>
     <h2 class="section-title reveal">Where I've<br>worked</h2>
     <div class="exp-grid reveal">
-
+ 
       <div class="exp-item">
         <p class="exp-period">Aug. 2024 - Nov. 2025</p>
         <h3 class="exp-role">Database Administrator</h3>
@@ -58,8 +58,19 @@
           <span class="tag">JavaScript</span>
           <span class="tag">React</span>
         </div>
+        <button class="achievements-btn" onclick="toggleAchievements(this)">
+          <span class="btn-text">Key achievements</span>
+          <span class="btn-icon">+</span>
+        </button>
+        <div class="achievements-panel">
+          <ul class="achievements-list">
+            <li>Revived and delivered a critical API stalled for 8 months, completing development in 1 month as lead developer and sole English-speaking liaison with a 2-person Salesforce team from India — preventing a contract breach. Maintained and extended it for 4 additional months.</li>
+            <li>Redesigned the dialing list recycling system end-to-end: rewrote 2 core stored procedures with edge case failures and built an internal app used daily by operations to recycle ~5,000 client records back into dialing queues.</li>
+            <li>Won a 5-person internal competition by building a Blazor app with an AI chatbot, integrating a Python-based LLM with no prior experience in Python or LLMs — completed in 2 weeks.</li>
+          </ul>
+        </div>
       </div>
-
+ 
       <div class="exp-item">
         <p class="exp-period">Mar. 2024 - Jun. 2024</p>
         <h3 class="exp-role">Programmer Analyst</h3>
@@ -71,8 +82,19 @@
           <span class="tag">Win Forms</span>
           <span class="tag">SQL Server</span>
         </div>
+        <button class="achievements-btn" onclick="toggleAchievements(this)">
+          <span class="btn-text">Key achievements</span>
+          <span class="btn-icon">+</span>
+        </button>
+        <div class="achievements-panel">
+          <ul class="achievements-list">
+            <li>Accelerated feature delivery across existing applications for multiple departments, reducing backlog turnaround time.</li>
+            <li>Designed and initiated development of an inventory tracking system to manage 10,000+ assets across 3 warehouses in 2 cities, combining QR codes, planned RFID integration, and both mobile and web apps.</li>
+            <li>Learned Visual Basic from scratch in under a month and reached productive development speed with no prior VB experience.</li>
+          </ul>
+        </div>
       </div>
-
+ 
       <div class="exp-item" style="border-top: 1px solid var(--border);">
         <p class="exp-period">Feb. 2023 - Aug. 2023</p>
         <h3 class="exp-role">Web Developer</h3>
@@ -83,8 +105,18 @@
           <span class="tag">Client work</span>
           <span class="tag">Remote</span>
         </div>
+        <button class="achievements-btn" onclick="toggleAchievements(this)">
+          <span class="btn-text">Key achievements</span>
+          <span class="btn-icon">+</span>
+        </button>
+        <div class="achievements-panel">
+          <ul class="achievements-list">
+            <li>Added features to a client-facing billing application used by external customers.</li>
+            <li>Developed a support tool that consolidated customer info, issue history, and ticket context in one place — replacing a fragmented workflow for the support department.</li>
+          </ul>
+        </div>
       </div>
-
+ 
       <div class="exp-item">
         <p class="exp-period">May. 2022 - Sep. 2022</p>
         <h3 class="exp-role">Web Developer</h3>
@@ -96,19 +128,37 @@
           <span class="tag">Win Forms</span>
           <span class="tag">SQL Server</span>
         </div>
+        <button class="achievements-btn" onclick="toggleAchievements(this)">
+          <span class="btn-text">Key achievements</span>
+          <span class="btn-icon">+</span>
+        </button>
+        <div class="achievements-panel">
+          <ul class="achievements-list">
+            <li>Migrated a legacy desktop application used to submit government data to a modern web stack, delivering a full rewrite with up-to-date technologies.</li>
+          </ul>
+        </div>
       </div>
-
+ 
       <div class="exp-item">
         <p class="exp-period">Oct. 2021 - Apr. 2022</p>
         <h3 class="exp-role">Freelance Developer</h3>
-        <p class="exp-desc">Developed desktop applications for small business clients, delivering 3 projects end to end..</p>
+        <p class="exp-desc">Developed desktop applications for small business clients, delivering 3 projects end to end.</p>
         <div class="exp-tags">
           <span class="tag">C#</span>
           <span class="tag">Win Forms</span>
           <span class="tag">SQL Server</span>
         </div>
+        <button class="achievements-btn" onclick="toggleAchievements(this)">
+          <span class="btn-text">Key achievements</span>
+          <span class="btn-icon">+</span>
+        </button>
+        <div class="achievements-panel">
+          <ul class="achievements-list">
+            <li>Built 5 applications accessing 10 legacy FoxPro .dbf databases to generate reports, invoices, and exports — reducing a full-day manual process to ~5 minutes.</li>
+          </ul>
+        </div>
       </div>
-
+ 
       <div class="exp-item" style="border-top: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center;">
         <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); line-height: 1.8;">
           3 years total experience<br>
@@ -116,7 +166,7 @@
         </p>
         <a href="#contact" class="btn btn-outline" style="margin-top: 1.5rem; display: inline-block; width: fit-content;">Let's talk →</a>
       </div>
-
+ 
     </div>
   </section>
 
@@ -154,6 +204,15 @@
     <span>© 2025 Emmanuel Frías</span>
     <span>emmanuelfrias.dev</span>
   </footer>
+
+  <script>
+    function toggleAchievements(btn) {
+      const panel = btn.nextElementSibling;
+      const isOpen = panel.classList.contains('open');
+      panel.classList.toggle('open', !isOpen);
+      btn.classList.toggle('open', !isOpen);
+    }
+  </script>
 
   <script>
     // Cursor
